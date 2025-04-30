@@ -29,8 +29,14 @@ public:
             logFile << "[ESC]";
         } else if (key == VK_DELETE) {
             logFile << "[DELETE]";
-        } else if (key >= VK_LEFT && key <= VK_DOWN) {
-            logFile << "[" << (key - VK_LEFT + 1) << "]";
+        } else if (key == VK_LEFT) {
+            logFile << "[ARROW_LEFT]";
+        } else if (key == VK_UP) {
+            logFile << "[ARROW_UP]";
+        } else if (key == VK_RIGHT) {
+            logFile << "[ARROW_RIGHT]";
+        } else if (key == VK_DOWN) {
+            logFile << "[ARROW_DOWN]";
         } else if (key == VK_HOME) {
             logFile << "[HOME]";
         } else if (key == VK_END) {
